@@ -1,0 +1,87 @@
+#test{
+transform: rotate(15deg) scale(0.7);
+
+
+  background-color: darkgrey;
+  color: blueviolet;
+  padding: 45px;
+  margin: 15px;
+  border: 7px solid white;
+  border-radius: 50px;
+  opacity:0.4 ;
+  box-shadow: -10px -10px 10px  white;
+  width: 300px;
+  height: 200px;
+  display: block;
+  text-align: center;
+  font-size: 100px;
+}
+#test:hover{border: 15px solid yellowgreen;
+opacity:1 ;}
+
+#test:hover{
+  transform: rotate(-70deg) scale(0.7);
+  transition: 1s all;
+  background-color: turquoise;
+}
+#a123{color: aqua;}
+#hhhhhqqqqq {
+  background-color: white;
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a{ color:chartreuse;
+  font-size: 40px;
+}
+div{
+  color: #FC31FF;
+  font-size: 50px;}
+  #a1 {color:darkred;
+  }
+  .human{
+    color: darkslateblue;
+  }
+  .animal{color: deepskyblue;}
+  .human1{color: gold;}
+  .message{color: indianred;
+  background-color: lawngreen;
+border: 1px solid #150000;
+font-size: 30px;
+margin: 10px;
+margin-right: 16 cm;
+padding: 15px;}
+.success{color: lightpink;
+background-color: black;}
+.info{color: black;
+background-color: chartreuse;
+font-size: xx-large;}
+.warning{color: crimson;
+background-color: darkgrey;}
+
+
+.message:hover{border:15px solid wheat}
+#a1:hover{border: 15px solid #150000;}
+
+
+
+
+
+
+
+body{
+  background-image:url(https://java-master.com/wp-content/uploads/2017/06/web-1045994_960_720.jpg) 
+}
