@@ -29,6 +29,10 @@ opacity:1 ;}
   background-color: white;
   color: red;
 }
+.message {
+  display: inline-grid;
+  grid-template-columns: 100px 100px;
+}
 
 
 
