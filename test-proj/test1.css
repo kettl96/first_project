@@ -32,6 +32,14 @@ opacity:1 ;}
 .message {
   display: inline-grid;
   grid-template-columns: 100px 100px;
+  grid-template-rows: 50px 50px;
+  /*  */
+  /* grid-template-columns: auto 50px 10% 2fr 1fr; 
+  fr: sets the column or row to a fraction of the available space,
+
+auto: sets the column or row to the width or height of its content automatically,
+
+%: adjusts the column or row to the percent width of its container.*/
 }
 
 
