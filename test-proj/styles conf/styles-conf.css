@@ -114,6 +114,17 @@ padding-right: 30px;
   *zoom: 1;
 }
 
+/*
+  ========================================
+  Полосы
+  ========================================
+*/
+
+.row {
+  background: white;
+  min-width: 960px;
+  padding: 66px 0 44px 0;
+}
 
 /*
   ========================================
@@ -139,11 +150,20 @@ h1, h2, h3, h4 {
   border-radius: 5px;
   display: inline-block;
   margin: 0;
+  color: white;
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;
 }
 
 .btn-alt {
   border: 1px solid #dfe2e5;
   padding: 10px 30px;
+}
+.btn-alt:hover {
+  background: white;
+  color: #648880;
 }
 
 /*
@@ -153,14 +173,18 @@ h1, h2, h3, h4 {
 */
 
 .hero {
+  color: white;
   line-height: 44px;
   padding: 22px 80px 66px 80px;
+  text-align: center;
+
 }
 .hero h2 {
   font-size: 36px;
 }
 .hero p {
   font-size: 24px;
+  font-weight: 100;
 }
 /*
   ========================================
@@ -173,15 +197,22 @@ h1, h2, h3, h4 {
   float: left;
   font-size: 48px;
   line-height: 44px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  text-shadow: 5px 6px 2px black;
 }
 
 .tagline {
   margin: 66px 0 22px 0;
+  text-align: right;
 }
  
 .primary-nav {
   font-size: 14px;
   font-weight: 400;
+  letter-spacing: .5px;
+  text-transform: uppercase;
 }
 /*
   ========================================
@@ -205,8 +236,9 @@ h1, h2, h3, h4 {
   ========================================
 */
 body {
+  background: #293f50;
   color: #888;
-  font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -227,6 +259,7 @@ h5 {
   color: #a9b2b9;
   font-size: 14px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 strong {
@@ -246,10 +279,32 @@ a:hover {
 }
 a {
   color: #648880;
+  text-decoration: none;
+}
+p a {
+  border-bottom: 1px solid #dfe2e5;
 }
 
 .teaser a:hover h3 {
   color: #a9b2b9;
 }
 
+.primary-header a,
+.primary-footer a {
+  color: #fff;
+}
+.primary-header a:hover,
+.primary-footer a:hover {
+  color: #648880;
+}
 
+
+/*
+  ========================================
+  Навигация
+  ========================================
+*/
+
+.nav {
+  text-align: right;
+}
