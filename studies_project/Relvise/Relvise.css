@@ -652,6 +652,83 @@ border-right: 0;
   padding: 0 22px;
 }
 
+/* ----------------------get-in-touch-------------------- */
+
+.page__getintouch {
+  
+}
+.getintouch {
+  padding: 80px 0 0 0;
+}
+.getintouch__container {
+}
+.advantages__header {
+}
+
+.getintouch__items {
+  display: flex;
+  align-items: center;
+}
+.getintouch__item {
+  flex: 0 1 33.333%;
+
+}
+.item-getintouch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 50px 15px;
+}
+.item-getintouch__icon {
+}
+
+.item-getintouch > *:not(:last-child) {
+margin: 0 0 15px 0;
+}
+.item-getintouch__emails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.item-getintouch__email {
+  color: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+}
+.item-getintouch__email:hover {
+  text-decoration: underline;
+}
+.item-getintouch__label {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+}
+.item-getintouch__button {
+  border: 1px solid #FF7B47;
+  min-height: 44px;
+display: flex;
+font-weight: 600;
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+color: #FF7B47;
+line-height: 142%;
+padding: 5px 20px;
+text-align: center;
+border-radius: 5px;
+transition: all 0.3s ease 0s;
+
+
+}
+.item-getintouch__button:hover {
+  background-color: #FF7B47;
+  color: white;
+}
+
 /* ------------------footer------------------------------ */
 
 
