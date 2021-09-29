@@ -665,9 +665,11 @@ border-right: 0;
 .advantages__header {
 }
 
-.getintouch__items {
-  display: flex;
-  align-items: center;
+@media (min-width: 992px) {
+  .getintouch__items {
+    display: flex;
+    align-items: center;
+  }
 }
 .getintouch__item {
   flex: 0 1 33.333%;
@@ -727,6 +729,80 @@ transition: all 0.3s ease 0s;
 .item-getintouch__button:hover {
   background-color: #FF7B47;
   color: white;
+}
+.item-getintouch__active {
+  background: #252B42;
+  color: white;
+  display: flex;
+flex-direction: column;
+align-items: center;
+padding: 80px 40px;
+}
+.button__active {
+  color: white;
+  border: 1px solid white;
+}
+
+/* ---------------------------contact------------------- */
+
+.page__contact {
+}
+.contact {
+  background-color: white;
+  padding: 42px 0;
+}
+.contact__container {
+}
+
+@media (min-width: 767px) {
+  .contact__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact__content {
+  margin: 0 20px 0 0;
+  } 
+}
+.contact__content {
+  margin: 0 0 20px 0;
+
+}
+.contact__tittle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: 0.1px
+}
+.contact__tittle:not(:last-child) {
+  margin: 0 0 10px 0;
+}
+.contact__text {
+  color: #737373;
+  font-weight: 500;
+font-size: 14px;
+line-height: 142%;
+letter-spacing: 0.2px;
+}
+.contact__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: #FF7B47;
+  color: white;
+  border-radius: 5px;
+  min-height: 58px;
+  min-width: 160px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 40px;
+  transition: all 0.3s ease 0s;
+}
+.contact__button:hover {
+  background-color: tomato;
+  
 }
 
 /* ------------------footer------------------------------ */
