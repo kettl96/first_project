@@ -66,7 +66,7 @@ a {
 
 ._container {
   max-width: 1170px;
-  padding: 0 135px;
+  padding: 0 0px;
   margin: 0px auto;
   box-sizing: content-box;
 }
@@ -136,7 +136,7 @@ a {
 }
 .main-block__tittle {
   
-  font-family:'PT Serif', serif;;
+  font-family:'PT Serif', serif;
   font-size: 32px;
   font-weight: 700;
   line-height: 150%;
@@ -169,9 +169,25 @@ a {
   line-height: 180%;
 }
 .main-block__buttons {
+  display: flex;
+  justify-content: center;
+  
 }
 .main-block__button {
+  background: #007397;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 1px;
+  padding: 20px 20px;
+transition: all 0.3s ease 0s;
 
+}
+.main-block__button:hover {
+  background-color: white;
+  color: #007397;
+  border: 1px solid #007397;
 }
 .main-block__image {
   position: relative;
@@ -186,4 +202,164 @@ a {
   width: 1170px;
   padding: 0 135px;  
   box-sizing: content-box;  
+}
+
+/* --------investor------------- */
+
+.page__investor {
+}
+.investor {
+}
+.page-investor__contgainer {
+}
+
+.page-investor__info {
+}
+.page-investor__title {
+  padding: 91px 0 48px 0;
+  font-family: PT Serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: 1px;
+  color: #3C3F3D;
+  text-transform: uppercase;
+}
+.page-investor__text {
+  max-width: 670px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 180%;
+}
+.page-investor__column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.page-investor_column__stats {
+padding: 48px 0 2px 0;
+}
+.page-investor_column__stats:not(:last-child) {
+  
+}
+.page-investor_column__number {
+  display: flex;
+  justify-content: center;
+  font-family: PT Serif;
+font-weight: 400;
+font-size: 54px;
+line-height: 100%;
+color: #007397;
+}
+.page-investor_colum__text {
+  display: flex;
+  font-size: 16px;
+  line-height: 200%;
+  font-weight: 400;
+  color: #AEC3D4;
+  justify-content: center;
+}
+.page-investor__button {
+  padding: 48px 0 0 0;
+  
+}
+
+.page-investor__link:hover {
+  background-color: white;
+  color: #007397;
+  border: 1px solid #007397;
+}
+.page-investor__link {
+  background: #007397;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 1px;
+  padding: 20px 86px;
+  transition: all 0.3s ease 0s;
+
+}
+
+/* ---------news-media------------ */
+
+.page__news {
+}
+.page-news__container {
+  margin-top: 95px;
+}
+.page-news__header {
+  display: flex;
+  justify-content: space-between;
+}
+.page-news__tittle {
+  margin-bottom: 48px;
+  font-family: PT Serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #3C3F3D;
+}
+.page-news__menu {
+  
+}
+.page-news__list {
+  display: flex;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 1px;
+}
+.page-news__item:not(:last-child) {
+  margin: 0 67px 0 0;
+}
+.page-news__item {
+  
+
+}
+.page-news__link {
+  color: #D3CFCE;
+}
+.news_all {
+  color: #007397;
+}
+.page-news__column {
+  display: flex;
+}
+.media__column {
+}
+.media__image {
+  position: absolute;
+
+}
+.image__header {
+  position: relative;
+  z-index: 2;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 133%;
+  /* color: white; */
+  margin: 24px 30px;
+}
+.image__title {
+  position: relative;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  color: white;
+  text-transform: uppercase;
+  margin: 190px 30px 77px 30px;
+}
+.media__text {
+
+  
+}
+.media__button {
+}
+.media_link {
 }
