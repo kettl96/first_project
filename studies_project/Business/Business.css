@@ -43,9 +43,9 @@ table {
 }
 html,
 body {
-  height: 100%;
+  height: 1440px;
   font-weight: 300;
-  font-family: Montserrat;
+  font-family: "Montserrat", "PT Serif";
   font-size: 20px;
   line-height: 1;
   color: #646667;
@@ -84,6 +84,7 @@ a {
   display: flex;
   align-items: center;
   padding: 41px 0;
+  justify-content: space-between;
 }
 
 .header__menu {
@@ -97,7 +98,7 @@ a {
   flex-wrap: wrap;
 }
 
-.menu__item {
+.menu__item:not(:last-child) {
   padding: 0 28px 0 0;
   
 }
@@ -108,7 +109,81 @@ a {
   letter-spacing: 1px;
   font-weight: 700;
   
+  
 }
 .menu__link:hover {
   text-decoration: underline;
+}
+
+/* ----main-block---- */
+
+.main-block {
+  position: relative;
+ max-width: 1170px;
+ margin: 0 auto;
+}
+.page__main-block {
+}
+.main-block__container {
+  padding: 0 100px;
+}
+
+.main-block__body {
+  position: relative;
+  z-index: 2;
+ 
+  
+}
+.main-block__tittle {
+  
+  font-family:'PT Serif', serif;;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 1px;
+  z-index: 2;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 3px 1px rgba(0, 0, 0, 0.6);
+}
+
+.main__tittle {
+  top: 232px;
+  right: 0;
+ position: absolute;
+ z-index: 2;
+ max-width: 770px;
+
+}
+.main-block__tittle {
+ 
+}
+.main__texts {
+
+}
+.main-block__text {
+  padding: 48px 0;
+  min-width: 970px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 180%;
+}
+.main-block__buttons {
+}
+.main-block__button {
+
+}
+.main-block__image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+
+.main-block__image img {
+  width: 1170px;
+  padding: 0 135px;  
+  box-sizing: content-box;  
 }
