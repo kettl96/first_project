@@ -35,5 +35,96 @@ body {
 /* --- */
 
 .wraper {
-  max-width: 1920px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.header {
+  
+}
+.header__background {
+  position: absolute;
+  
+}
+.header__background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+._ibg {
+ 
+}
+
+
+.header__content {
+ 
+  position: relative;
+  display: grid;
+  grid-template-columns: 960px 960px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "header"
+                       "title";
+}
+.header__menu {
+  display: grid;
+
+ 
+
+}
+.header__logo {
+  padding: 24px 0 0 133px;
+}
+.header__list {
+  display: grid;
+  align-items: start;
+  justify-items: center;
+  padding-top: 49px;
+  padding-right: 295px;
+
+  
+  grid-auto-flow: column;
+  
+
+}
+.header__link {
+
+}
+.header__link_img {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.header__link_img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ibg_button {
+  
+}
+.header__button {
+}
+.header__title {
+  display: grid;
+  justify-items: center;
+  
+  /* grid-area: title; */
+}
+.main__title {
+  display: grid;
+
+  margin: 0 0 0px 74px; 
+  
+  font-weight: 400;
+  font-size: 135px;
+  line-height: 99%;
+  color: #FF9F00;
+  text-transform: uppercase;
+}
+.main__text {
+}
+.main__price {
 }
