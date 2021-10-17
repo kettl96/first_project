@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Hangman</h1>
+
+ 
+  <script>
+    var words = [
+      "программа",
+      "макака",
+      "прекрасный",
+      "оладушек"
+    ];
+    var word = words[Math.floor(Math.random() * words.length)];
+
+    var answerArray = [];
+    for (var i = 0; i < word.length; i++) {
+      answerArray[i] = "_";
+    }
+
+    var remainingLetters = word.length;
+    var motion = 6;
+    var isHit = false;
+
+    while ((remainingLetters > 0) && (motion > 0)) {
+      alert(answerArray.join(" "));
+      var guess = prompt("Guess letter, or push Canсel for leave the game");
+      guess = guess.toLowerCase();
+      if (guess === null) {
+        break;
+      } else if (guess.length !== 1) {
+        alert("Please, enter one letter.");
+      } else {
+        isHit = false;
+        for (var j = 0; j < word.length; j++) {
+          var letterWasEntered = answerArray[j] === guess;
+          if (letterWasEntered) {
+            alert("You already enter this letter");
+            break;
+          } if (word[j] === guess) {
+            answerArray[j] = guess;
+            remainingLetters--;
+            isHit = true;
+          }
+        } if (!isHit) {
+          motion--;
+          alert("You have " + motion + "trues");
+          if(motion===0) {
+            alert("You lose");
+            break;
+          }
+        }
+      }
+    }
+
+    alert(answerArray.join(" "));
+    alert("Good! It was " + word);
+  </script>
+</body>
+
+</html>
