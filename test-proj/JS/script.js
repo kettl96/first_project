@@ -157,4 +157,64 @@ for (var i = 0; i<input.length; i++) {
 }
 console.log(output);
 
-alert("javaScript its cool")
+// alert("javaScript its cool")
+
+
+var printMultipleTimes = function (howManyTimes, whatToDraw) {
+  for (var i = 0; i < howManyTimes; i++) {
+  console.log(i + " " + whatToDraw);
+  }
+  };
+  console.log(printMultipleTimes(3, "^_^"))
+
+  var double = function (number) {
+    return number *2;
+  };
+  console.log(double(double(5)));
+
+
+  var pickRandomWord = function (words) {
+    return words[Math.floor(Math.random() * words.length)];
+  };
+  var randomWordss = ["planet", "worm","duck"];
+
+  console.log(pickRandomWord(randomWordss));
+
+
+
+  // joker
+  var randomString = "you have " + pickRandomWord(randomBodyParts) + 
+  " slovno " + pickRandomWord(randomAdjectives) + 
+  " " + pickRandomWord(randomWords) + "!!!";
+  console.log(randomString);
+
+
+  // func
+
+  var add = function (a, b) {
+    return a+b;
+  }
+  var multiply = function (a,b) {
+    return a*b;
+  }
+
+  console.log(add(multiply(36325,9824), 777));
+
+
+  // 
+  var areArraysSame = function (arr1, arr2) {
+    if (arr1.length !== arr2.length) {
+      return false;
+    }
+    for (var i = 0; i<arr1.length; i++) {
+      if (arr1[i] !== arr2[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+console.log(areArraysSame([1, 2, 3], [4, 5, 6]))
+console.log(areArraysSame([1, 2, 3], [1, 2, 3]))
+
+// --
+
