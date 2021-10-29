@@ -278,18 +278,81 @@
 
 // -----------------------------
 
-let menu = {
-  width: 200,
-  height: 300,
-  tittle: "my menu"
-};
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   tittle: "my menu"
+// };
 
-function multiplyNumeric(menu) {
-  for (let key in menu) {
-    if (typeof menu[key] == "number") {
-      menu[key] *= 2;
-    }
-  }
-};
+// console.log();
+// Object.values(menu).forEach((item) => {
+//   if  ( typeof item === 'number') {
+//     console.log(item * 2);
+//   }
+// })
 
-multiplyNumeric(menu);
+// function multiplyNumeric(menu) {
+//   for (let key in menu) {
+//     if (typeof menu[key] == "number") {
+//       menu[key] *= 2;
+//     }
+//   }
+// };
+
+// multiplyNumeric(menu);
+
+// ---------------------------------
+
+// let calculator = {
+//   sum() {
+//     return this.a  + this.b;
+//   },
+
+//   mul() {
+//     return this.a * this.b;
+//   },
+
+//   read() {
+//     this.a = +prompt('a?', 0);
+//     this.b = +prompt('b?', 0);
+//   }
+// };
+
+// calculator.read();
+// alert( calculator.sum() );
+// alert( calculator.mul() );
+// ---------------------------------
+
+// function Calculator() {
+
+//   this.read = function() {
+//     this.a = +prompt('a?', 0);
+//     this.b = +prompt('b?', 0);
+//   };
+
+//   this.sum = function() {
+//     return this.a + this.b;
+//   };
+
+//   this.mul = function() {
+//     return this.a * this.b;
+//   };
+// }
+
+// let calculator = new Calculator();
+// calculator.read();
+
+// alert( "sum=" + calculator.sum() );
+// alert( "mul=" + calculator.mul() );
+
+// ----------------------------------
+const Animal = function () {
+  this.name = 'lol'
+}
+const animal = {
+  name: 'lol'
+}
+
+const Cat = new Animal
+
+console.log(Cat);
