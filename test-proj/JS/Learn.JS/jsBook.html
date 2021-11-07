@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
- 
+
 </head>
+
 <body>
-  
+
   <!-- <script>
     var scoops = 5;
     while (scoops > 0) {
@@ -17,7 +19,7 @@
     }
     document.write("ice")
   </script> -->
-  
+
   <!-- <script>
     setTimeout(wakeUpUser, 5000);
     function wakeUpUser() {
@@ -25,7 +27,7 @@
     }
   </script> -->
 
-<!-- <script>
+  <!-- <script>
   var name = "joe";
   var i = 0;
   
@@ -39,7 +41,7 @@
 
 </script> -->
 
-<script>
+  <!-- <script>
   var word = 'bottles';
 
   var count = 99;
@@ -59,15 +61,452 @@
       console.log("No more " + word + " of beer on the wall.");
     }
   }
+</script> -->
+
+  <!-- <script>
+  function bark(name, weight) {
+    if (weight > 20) {
+      console.log(name + "says WOOF");
+    } else {
+      console.log(name+ " says woof");
+    }
+  }
+
+  bark("rover", 23);
+  bark("spot", 13);
+</script> -->
+
+  <!-- <script>
+  function whatShallIWear (temp) {
+    if (temp < 60) {
+      console.log("jacket");
+    } else if (temp < 70) {
+      console.log("sweater");
+    } else {
+      console.log("t-shirt");
+    }
+  }
+
+  whatShallIWear(50);
+  whatShallIWear(80);
+  whatShallIWear(60)
+</script> -->
+
+  <!-- <script>
+  function doIt(param) {
+    param = 2;
+  }
+  var test = 1;
+  doIt(test);
+  console.log(test);
+</script> -->
+
+
+  <!-- пузыри1 -->
+  <!-- <script>
+    var scores = [60, 50, 60, 58, 54, 54,
+      58, 50, 52, 54, 48, 69,
+      34, 55, 51, 52, 44, 51,
+      69, 64, 66, 55, 52, 61,
+      46, 31, 57, 52, 44, 18,
+      41, 53, 55, 61, 51, 44];
+
+      var highScore = 0;
+      var output;
+
+      for (var i = 0; i < scores.length; i++) {
+
+        output = "Bubble solution #" + i +
+        " score: " + scores[i];
+
+        console.log(output);
+
+        if (scores[i] > highScore) {
+          highScore = scores[i];
+        }
+      }
+      console.log("Bubble tests: " + scores.length);
+      console.log("Highest bubble score: " + highScore);
+
+      var bestSolutions = [];
+      for (var i = 0; i < scores.length; i++) {
+        if (scores[i] == highScore) {
+          bestSolutions.push(i);
+          // bestSolutions[bestSolutions.length] = i;
+        }
+
+      }
+      console.log("Solutions with the highest score: " + bestSolutions);
+  </script> -->
+
+  <!-- пузыри2 через функцию -->
+  <!-- <script>
+    var scores = [60, 50, 60, 58, 54, 54,
+      58, 50, 52, 54, 48, 69,
+      34, 55, 51, 52, 44, 51,
+      69, 64, 66, 55, 52, 61,
+      46, 31, 57, 52, 44, 18,
+      41, 53, 55, 61, 51, 44];
+
+    function printAndGetHighScore(scores) {
+      var highScore = 0;
+      var output;
+      for (var i = 0; i < scores.length; i++) {
+
+        output = "Bubble solution #" + i +
+          " score: " + scores[i];
+
+        console.log(output);
+
+        if (scores[i] > highScore) {
+          highScore = scores[i];
+        }
+      }
+      return highScore;
+    }
+
+    var highScore = printAndGetHighScore(scores);
+    console.log("Bubble tests: " + scores.length);
+    console.log("Highest bubble score: " + highScore);
+
+    function getBestResults(scores, highScore) {
+      var bestSolutions = [];
+      for (var i = 0; i < scores.length; i++) {
+        if (scores[i] == highScore) {
+          bestSolutions.push(i);
+        }
+      }
+      return bestSolutions;
+    }
+
+
+    var bestSolutions = getBestResults(scores, highScore);
+    console.log("Solutions with the highest score: " + bestSolutions);
+
+    var costs = [.25, .27, .25, .25, .25, .25,
+      .33, .31, .25, .29, .27, .22,
+      .31, .25, .25, .33, .21, .25,
+      .25, .25, .28, .25, .24, .22,
+      .20, .25, .30, .25, .24, .25,
+      .25, .25, .27, .25, .26, .29];
+
+      function getMostCostEffectiveSolution(scores, costs, highScore) {
+        var cost = 100;
+        var index;
+
+        for (var i = 0; i < scores.length; i++) {
+          if (scores[i] == highScore) {
+            if (cost > costs[i]){
+              index = i;
+              cost = costs[i];
+            }
+          }
+        } return index;
+      }
+      var mostCostEffective = getMostCostEffectiveSolution(scores, costs, highScore);
+      console.log("Bubble Solution #" + mostCostEffective + " is the most effective");
+  </script> -->
+
+  <!-- объекты -->
+  <!-- <script>
+    // var cadi = {
+    //   make: GM,
+    //   model: "Cadillac",
+    //   year: 1955,
+    //   color: "tan",
+    //   passengers: 5,
+    //   mileage: 12892,
+    //   convertible: false
+    // };
+
+    var chevy = {
+      make: "Chevy",
+      model: "Bel Air",
+      year: 1957,
+      color: "red",
+      passengers: 2,
+      convertible: false,
+      mileage: 1021
+    };
+
+    function prequal(car) {
+      if (car.mileage > 10000) {
+        return false;
+      } else if (car.year > 1960) {
+        return false;
+      }
+      return true;
+    }
+    var worthALook = prequal(chevy);
+    if (worthALook) {
+      console.log("You gotta check out this " + chevy.make + " " + chevy.model);
+    } else {
+      console.log("You should really pass on the " + chevy.make + " " + chevy.model);
+    }
+  </script> -->
+
+
+  <!-- zoom zoom drive -->
+  <!-- <script>
+    var fiat = {
+      make: "Fiat",
+      model: "500",
+      year: 1957,
+      color: "Medium Blue",
+      passengers: 2,
+      convertible: false,
+      mileage: 88000,
+      started: false,
+      fuel: 0,
+
+      start: function () {
+        if (this.fuel > 0) {
+        this.started = true;
+        } else {
+          alert("The car is on empty, fill up before starting!");
+        }
+      },
+      stop: function () {
+        this.started = false;
+      },
+      drive: function () {
+        if (this.started) {
+          if (this.fuel > 0) {
+            alert(this.make + " " + 
+              this.model + " goes zoom zoom!");
+            this.fuel = this.fuel - 1;
+          } else {
+            alert("Uh oh, out of fuel.");
+            this.stop();
+          }
+        } else {
+          alert("You need to start the engine first.");
+        }
+      },
+
+      addFuel: function(amount) {
+        this.fuel = this.fuel + amount;
+      }
+    };
+
+    fiat.addFuel(1);
+    fiat.start();
+    fiat.drive();
+    fiat.drive();
+    fiat.addFuel(1);
+
+    // fiat.start();
+    fiat.drive();
+    // fiat.drive();
+    
+
+  </script> -->
+
+
+  <!-- song -->
+  <!-- <script>
+    var song = {
+      name: "Walk This Way",
+      artist: "Run-D.M.C.",
+      minutes: 4,
+      seconds: 3,
+      genre: "80s",
+      playing: false,
+      play: function () {
+        if (!this.playing) {
+          this.playing = true;
+          console.log("Playing "
+            + this.name + " by " + this.artist);
+        }
+      },
+      pause: function () {
+        if (this.playing) {
+          this.playing = false;
+        }
+      }
+    };
+    song.play();
+    song.pause();
+  </script> -->
+
+  <!-- ball -->
+  <!-- <script>
+  var eightBall = {
+    index: 0,
+    advice: ["yes", "no", "maybe", "not a chance"],
+    shake: function() {
+      this.index = this.index + 1;
+      if (this.index >= this.advice.length) {
+        this.index = 0;
+      }
+    },
+    look: function() {
+      return this.advice[this.index];
+    }
+  };
+
+  eightBall.shake();
+  console.log(eightBall.look());
+
+  eightBall.shake();
+  console.log(eightBall.look());
+  eightBall.shake();
+  console.log(eightBall.look());
+</script> -->
+
+  <!-- автопарк -->
+  <!-- <script>
+  var cadi = {
+make: "GM",
+model: "Cadillac",
+year: 1955,
+color: "tan",
+passengers: 5,
+convertible: false,
+mileage: 12892,
+started: false,
+start: function() {
+this.started = true;
+},
+stop: function() {
+this.started = false;
+},
+drive: function() {
+if (this.started) {
+alert(this.make + " " +
+this.model + " goes zoom zoom!");
+} else {
+alert("You need to start the engine first.");
+}
+}
+};
+
+var chevy = {
+make: "Chevy",
+model: "Bel Air",
+year: 1957,
+color: "red",
+passengers: 2,
+convertible: false,
+mileage: 1021,
+started: false,
+start: function() {
+this.started = true;
+},
+stop: function() {
+this.started = false;
+},
+drive: function() {
+if (this.started) {
+alert(this.make + " " +
+this.model + " goes zoom zoom!");
+} else {
+alert("You need to start the engine first.");
+}
+}
+};
+
+var taxi = {
+make: "Webville Motors",
+model: "Taxi",
+year: 1955,
+color: "yellow",
+passengers: 4,
+convertible: false,
+mileage: 281341,
+started: false,
+start: function() {
+this.started = true;
+},
+stop: function() {
+this.started = false;
+},
+drive: function() {
+if (this.started) {
+alert(this.make + " " +
+this.model + " goes zoom zoom!");
+} else {
+alert("You need to start the engine first.");
+}
+}
+};
+
+cadi.start();
+cadi.drive();
+cadi.stop();
+chevy.start();
+chevy.drive();
+chevy.stop();
+taxi.start();
+taxi.drive();
+taxi.stop();
+
+</script> -->
+
+
+
+  <!-- <script>
+    function findCarInLot(car) {
+      for (var i = 0; i < lot.length; i++) {
+        if (car === lot[i]) {
+          return i;
+        }
+      }
+      return -1;
+    }
+    var chevy = {
+      make: "Chevy",
+      model: "Bel Air"
+    };
+    var taxi = {
+      make: "Webville Motors",
+      model: "Taxi"
+    };
+    var fiat1 = {
+      make: "Fiat",
+      model: "500"
+    };
+    var fiat2 = {
+      make: "Fiat",
+      model: "500"
+    };
+    var lot = [chevy, taxi, fiat1, fiat2];
+    var loc1 = findCarInLot(fiat2);
+    console.log(loc1)
+    // var loc2 = findCarInLot(taxi);
+    // var loc3 = findCarInLot(chevy);
+    // var loc4 = findCarInLot(fiat1);
+
+    // console.log(loc1);
+  </script> -->
+
+
+  <!-- <script>
+    var text = "YOU";
+    var presenttableText = text.toLowerCase();
+    if (presenttableText.length > 0) {
+      alert(presenttableText);
+    }
+  </script> -->
+
+<script>
+  function Duck(sound) {
+    this.sound = sound;
+    this.quack = function() {
+      console.log(this.sound);
+    }
+  }
+
+  var toy  = new Duck("quack quack");
+
+  toy.quack();
+
+  console.log(typeof toy);
+  console.log(toy instanceof Duck);
 </script>
 
 
 
-
-
-
-
-
-
 </body>
+
 </html>
