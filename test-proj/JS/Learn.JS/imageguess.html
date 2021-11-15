@@ -1,29 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Guess</title>
-  <style> body { margin: 20px;}</style>
-  <script>
-  
+  <style>
+    body {
+      margin: 20px;
+    }
+
+    img {
+      margin: 20px;
+      width: auto;
+      height: auto;
+      max-width: 680px;
+      max-height: 550px;
+    }
+  </style>
+   <!-- <script>
+
     window.onload = init;
     function init() {
-      var image = document.getElementById("zero");
-      image.onclick = showAnswer;
-      image.addEventListener('click', function(){
-        qadasdasd
+       var image = document.getElementById("zero");
+       image.onclick = showAnswer;
+       image.addEventListener('click', function(){
+         qadasdasd
       })
-    }
+
+      var images = document.getElementsByTagName("img");
+      for (var i = 0; i < images.length; i++) {
+        images[i].onclick = showAnswer;
+      }
+    };
 
     function showAnswer() {
       var image = document.getElementById("zero");
       image.src = "https://icdn.lenta.ru/images/2021/04/27/16/20210427163138131/square_320_c09ebae17387b7d6eeb9fa0d42afe5ee.jpg"
     }
+  </script> -->
+
+  <script>
+    window.onload = init;
+    function init() {
+      var images = document.getElementsByTagName("img");
+      for (var i = 0; i < images.length; i++) {
+        images[i].onclick = showAnswer;
+      }
+    };
+
+    function showAnswer(eventObj) {
+      var image = eventObj.target;
+
+      var name = image.id;
+      name = name + ".jpg";
+      image.src = name;
+    }
   </script>
 </head>
+
 <body>
-  <img  id="zero" src="https://static.wikia.nocookie.net/cbbd2c22-35c3-4b4b-92f9-1520209ce842" alt="">
+  <img id="zero" src="https://static.wikia.nocookie.net/cbbd2c22-35c3-4b4b-92f9-1520209ce842" alt="">
+  <img id="one" src="https://avatars.mds.yandex.net/get-verba/1030388/2a000001609d2cd75681e9e6a8e8d3cd83b6/cattouch"
+    alt="">
+  <img id="two" src="https://a.d-cd.net/_iAAAgPWe-A-960.jpg" alt="">
+  <img id="three" src="https://image.shutterstock.com/image-photo/gtr-r35-car-racing-2020-260nw-1969152505.jpg" alt="">
+  <img id="four" src="https://i.pinimg.com/originals/37/cb/a7/37cba7413abe0f254bad4714a89efcd9.jpg" alt="">
+  <img id="five"
+    src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F60f6114db90fec9ac5091f01%2F2022-Nissan-GTR-2%2F960x0.jpg%3Ffit%3Dscale"
+    alt="">
 </body>
+
 </html>
+
