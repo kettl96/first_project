@@ -385,7 +385,7 @@ for (let i = 0; i < max; i++) {
 console.log(findMissing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]));
 </script> -->
 
-  <script>
+  <!-- <script>
     let units = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
       'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
 
@@ -432,9 +432,264 @@ console.log(findMissing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]));
     }
       console.log(toReadable(30));
       console.log(typeof '9');
-      // console.log(arr);
-      //   console.log(resultHundreds);
-  </script>
+      
+  </script> -->
+
+  <!-- <script>
+    function getDecimal(n){
+      let num = String(n).split(".")[1] ;
+      let whole = String(n).split('');
+      if (whole[whole.length -1] == 0) {
+        return 0;
+      } 
+      else {
+        // let result =  num.slice(-2).join('')
+        return Number(0+'.'+num);
+      }
+     
+}
+console.log(getDecimal(2.3));
+  </script> -->
+
+  <!-- <script>
+  function maxTriSum(numbers){
+    let arr1 = new Set(numbers);
+    let arr2 = [...arr1].sort(function(a,b) {
+      return b-a;}).slice(0,3);
+      let sum = arr2.reduce(function(s, el) {
+        return s+el;
+      });
+      return sum;
+};
+console.log(maxTriSum([3,2,6,8,2,3]))
+</script> -->
+
+  <!-- <script>
+function myLanguages(results) {
+  let arr = Object.entries(results).sort((a,b) => b[1]-a[1]);
+  let filterArr = []; 
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i][1]>=60) {
+      filterArr.push(arr[i][0]) 
+    }
+  }
+ return filterArr;
+}
+console.log(myLanguages({"Java" : 10, "Ruby" : 60, "Python" : 65}));
+</script> -->
+
+  <!-- <script>
+  function nicknameGenerator(name){
+let arr = name.split('');
+if (arr.length < 4) {
+  return "Error: Name too short";
+}
+else if (['a','e','i','o','u'].includes(arr[2])) {
+  return arr.slice(0, 4).join('')
+} 
+else {
+  return arr.slice(0,3).join('')
+}
+}
+console.log(nicknameGenerator("Jimmy"));
+</script> -->
+
+  <!-- <script>
+  function sortMyString(S) {
+    let arr = S.split('');
+    let part1 = [];
+    let part2 = [];
+    for (let i = 0; i < arr.length; i++) {
+      if (i % 2 == 0) {
+        part1.push(arr[i])
+      }
+      else {
+        part2.push(arr[i])
+      }
+    }
+    let result = part1.join('') +' '+ (part2.join(''))
+    // console.log(result);
+    // console.log(part1);
+    return result;
+}
+
+console.log(sortMyString("YCOLUE'VREER"));
+</script> -->
+
+  <!-- <script>
+  console.log(Math.log2(1024));
+  function isPowerOfTwo(n){
+    if (Number.isInteger(Math.log2(1024))) {
+      return true;
+    } 
+    else { 
+      return false;
+    }
+}
+console.log(isPowerOfTwo(1021));
+</script> -->
+
+  <!-- <script>
+    function sentence(List) {
+      let filterArr = [];
+      let arr = [];
+      List.forEach((obj) => { arr.push(...Object.entries(obj)) })
+      let arrSort = arr.sort((a, b) => a[0] - b[0])
+      for (let i = 0; i < arrSort.length; i++) {
+        filterArr.push(arrSort[i][1]);
+      }
+      return filterArr.join(' ');
+    }
+    console.log(sentence([
+      { '4': 'dog' }, { '2': 'took' }, { '3': 'his' },
+      { '-2': 'Vatsan' }, { '5': 'for' }, { '6': 'a' }, { '12': 'spin' }
+    ]))
+
+  </script> -->
+
+  <!-- <script>
+var Sum = sum = function(arr){ return arr.reduce( (previousValue, currentValue) => previousValue + currentValue); };    
+
+console.log(sum([[1,2,3,4,5,6,7,8,9,10],[71,-548,12.3,83,-47,-1.7,-892,58,31415,2718,-38]]));
+  </script> -->
+
+  <!-- <script>
+    var Sum = 'sum = function(arr){ return arr.reduce((a,b)=>a+b,0 ); }'; 
+    console.log(Sum([[1,2,3,4,5,6,7,8,9,10],[71,-548,12.3,83,-47,-1.7,-892,58,31415,2718,-38]]));
+  </script> -->
+
+  <!-- <script>
+    function vowelOne(s) {
+      let vowels = ['a', 'e', 'i', 'o', 'u'];
+      let vowelsUp = vowels.join('').toUpperCase().split('')
+      console.log(vowelsUp);
+      let arr = s.split('');
+      let result = [];
+      for (let i = 0; i < arr.length; i++) {
+        if (vowels.includes(arr[i]) || vowelsUp.includes(arr[i])) {
+          result.push(1);
+        } else {
+          result.push(0);
+        }
+      }
+      return String(result.join(''))
+    }
+    console.log(vowelOne('acDAc'));
+  </script> -->
+
+  <!-- <script>
+
+  function killer(suspectInfo, dead) {
+    let body = dead.join(', ');
+    // console.log(dead);
+    // console.log( body);
+    for (key in suspectInfo) {
+      console.log(suspectInfo[key].includes(dead[0] && dead[1]));
+      if (suspectInfo[key].includes(dead[0])) {
+        console.log(suspectInfo[key]);
+    return  key;
+  }
+}
+console.log(suspectInfo[key]);
+for (key in suspectInfo){}
+suspectInfo.forEach( d => dead(d))
+return suspectInfo
+}
+
+console.log(killer({'James': ['Jacob',  'Lucas'], 
+'Johnny': ['David', 'Kyle', 'Bill', 'Lucas'], 
+'Peter': ['Lucy', 'Kyle']}, 
+['Lucas', 'Bill']));
+
+</script> -->
+
+  <!-- <script>
+    function killer(suspectInfo, dead) {
+      let counter = 0;
+      // console.log(dead);
+      for (key in suspectInfo) {
+        // console.log(suspectInfo[key]);
+        for (let i = 0; i < dead.length; i++) {
+          if (suspectInfo[key].includes(dead[i])) {
+            counter += 1;
+          } 
+        } 
+        if (counter === dead.length) {
+          return key;
+        }
+        //  else {
+        //   counter = 0;
+        // }
+      }
+    }
+
+
+
+
+    console.log(killer({
+      'James': ['Jacob', 'Lucas'],
+      'Peter': ['Lucy', 'Kyle', 'Lucas'],
+      'Johnny': ['David', 'Kyle', 'Lucas', 'Bill'],
+    },
+      ['Lucas', 'Bill']));
+  </script> -->
+
+  <!-- <script>
+ function dataReverse(data){
+  if (data.length===0) return []
+  const arrayBytes = [];
+  const byt = data.length / 8;
+  for (var i = 0; i < byt; i++){
+    arrayBytes.push(data.splice(0,8));
+  }
+  return arrayBytes.reverse().join().split(',').map(x=>x*1);
+}
+
+console.log(dataReverse([1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]));
+  </script> -->
+
+<!-- <script>
+  function ColorToHex(color) {
+  var hexadecimal = color.toString(16);
+  console.log(hexadecimal);
+  return hexadecimal.length == 1 ? "0" + hexadecimal : hexadecimal;
+}
+
+function ConvertRGBtoHex(red, green, blue) {
+  console.log(red+green+blue.toString(16));
+  return "#" + ColorToHex(red) + ColorToHex(green) + ColorToHex(blue);
+}
+console.log(ConvertRGBtoHex(300,255,255));
+</script> -->
+
+<!-- <script>
+ function rgb(){
+
+let arr = [...arguments]
+arr.forEach((el,i)=> {
+  if(el>255) {
+    arr[i] = 255
+  } 
+})
+
+let [r, g, b] = [...arr];
+
+function hex(color) {
+
+let arr = color.toString(16);
+if (arr.length == 1) {
+  return '0'+arr;
+} else if (arr.includes('-')) {
+  return '00';
+}
+else {
+  return arr.toUpperCase();
+}
+} 
+return  hex(r)+hex(g)+hex(b);
+}
+console.log(rgb(300,255,255));
+</script> -->
 
 
 </body>
