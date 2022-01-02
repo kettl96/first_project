@@ -648,7 +648,7 @@ console.log(killer({'James': ['Jacob',  'Lucas'],
 console.log(dataReverse([1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]));
   </script> -->
 
-<!-- <script>
+  <!-- <script>
   function ColorToHex(color) {
   var hexadecimal = color.toString(16);
   console.log(hexadecimal);
@@ -662,7 +662,7 @@ function ConvertRGBtoHex(red, green, blue) {
 console.log(ConvertRGBtoHex(300,255,255));
 </script> -->
 
-<!-- <script>
+  <!-- <script>
  function rgb(){
 
 let arr = [...arguments]
@@ -691,9 +691,50 @@ return  hex(r)+hex(g)+hex(b);
 console.log(rgb(300,255,255));
 </script> -->
 
+  <!-- <script>
+    function strCount(obj) {
+      let counter = 0;
+      let rec = (object) => {
+        console.log(object);
+        for (let key in object) {
+          if (typeof object[key] == 'string') {
+            counter += 1;
+          }
+          if (typeof object[key] == 'object') {
+              rec(object[key])
+            }
+          }
+          return counter;
+        }      
+      return rec(obj)
+    }
+    console.log(strCount({
+      first: "1",
+      second: "2",
+      third: false,
+      fourth: ["anytime", 2, 3, 4],
+      fifth: null,
+      sixth: undefined,
+      seventh: {}
+    }));
+  </script> -->
+
 <script>
-  
+ function convert(input, source, target) {
+	let s = 0;
+	let str = '';
+	for (let i = 0; i < input.length; i++) {
+		s = s * source.length + source.indexOf(input[i]);
+	}
+	s//?
+	while (s > 0) {
+		str = target[s % target.length] + str;
+		s = Math.floor(s / target.length);
+	}
+	return str ? str : target[0];
+}
 </script>
+
 </body>
 
 </html>
