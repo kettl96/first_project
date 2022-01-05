@@ -719,7 +719,7 @@ console.log(rgb(300,255,255));
     }));
   </script> -->
 
-<script>
+  <!-- <script>
  function convert(input, source, target) {
 	let s = 0;
 	let str = '';
@@ -734,7 +734,80 @@ console.log(rgb(300,255,255));
 	return str ? str : target[0];
 }
 
+</script> -->
+
+  <!-- <script>
+    function getCard() {
+      let mixed = [];
+      function getRandomArbitrary(min, max) {
+        if (!mixed.includes(Math.floor(Math.random() * (max - min + 1) + min))) {
+          mixed.push(Math.floor(Math.random() * (max - min + 1) + min));
+        }
+        // console.log(mixed-);
+      }
+      function calc(alph, count, min, max) {
+        let arr = [];
+        for (let i = 0; i < count; i++) {
+          getRandomArbitrary(min, max)
+        }
+        console.log(mixed);
+        // for (let i = 0; i < count; i++) {
+        //   arr.push(alph + getRandomArbitrary(min, max))
+        // }
+        return arr;
+      }
+      return calc('B', 5, 1, 15)
+        .concat(calc('I', 5, 16, 30), calc('N', 4, 31, 45), calc('G', 5, 46, 60), calc('O', 5, 61, 75));
+    }
+    console.log(getCard());
+  </script> -->
+  
+  <!-- <script>
+    function getCard() {
+      function getRandomArbitrary(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      function calc(alph, count, min, max) {
+        let arr = [];
+        for (let i = 0; i < count; i++) {
+          
+          let check = () => {
+            let random = alph + getRandomArbitrary(min, max);
+            if (!arr.includes(random)) {             
+              return arr.push(random);
+            }
+            return check();            
+          }
+          
+          check();
+        }
+        return arr;
+      }
+      return calc('B', 5, 1, 15).concat(calc('I', 5, 16, 30), calc('N', 4, 31, 45), calc('G', 5, 46, 60), calc('O', 5, 61, 75));
+    }
+    console.log(getCard());
+  </script> -->
+
+  <!-- <script>
+    function countBites(n) {
+let bit = n.toString(2).split('');
+let counter = 0;
+for (let i = 0; i < bit.length; i++) {
+  if (bit[i] == 1) {
+    counter += 1;
+  }
+}
+console.log(bit);
+return counter;
+}
+    console.log(countBites(51));
+  </script> -->
+
+<script>
+  
 </script>
+
+
 
 </body>
 
