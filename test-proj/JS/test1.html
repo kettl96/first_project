@@ -803,11 +803,31 @@ return counter;
     console.log(countBites(51));
   </script> -->
 
+<!-- <script>
+  function whatTimeIsIt(a) { 
+    let time = a*2;
+    let m = Math.floor(time % 60);
+    let h = Math.round((time - m) / 60) ;
+    if (time<60){h = 12}
+return  `${h.toString().split('').length == 2 ? h : `0${h}`}:${m.toString().split('').length == 2 ? m : `0${m}`}`;
+}
+console.log(whatTimeIsIt(1));
+</script> -->
+
 <script>
   
+function isPrime(num) {
+  let s = Math.sqrt(num)
+  for (let i = 2; i <= s; i++) {    
+    if (num % i === 0) {
+      return false;
+    }   
+  }
+  return num>1; 
+}
+console.log(isPrime(9));
+
 </script>
-
-
 
 </body>
 
