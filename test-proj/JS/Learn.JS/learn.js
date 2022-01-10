@@ -241,7 +241,7 @@
 //   for (let i = 0; i < n; i++) {
 //     result *= x;
 //   } 
-  
+
 //   return result;
 // }
 
@@ -346,13 +346,176 @@
 // alert( "mul=" + calculator.mul() );
 
 // ----------------------------------
-const Animal = function () {
-  this.name = 'lol'
-}
-const animal = {
-  name: 'lol'
+// const Animal = function () {
+//   this.name = 'lol'
+// }
+// const animal = {
+//   name: 'lol'
+// }
+
+// const Cat = new Animal
+
+// console.log(Cat);
+
+// function fun(echo) {
+//   console.log(echo);
+// };
+// fun("hello");
+// function boo(aFunction) {
+//   aFunction("boo");
+// }
+// boo(fun);
+// console.log(fun);
+// fun(boo);
+// var moreFun = fun;
+// moreFun("hello again");
+
+// -----------------------------------
+
+// function compareNumbers(num1, num2) {
+//   if (num1 > num2) {
+//     return 1;
+//   } else if (num1 === num2) {
+//     return 0;
+//   } else {
+//     return -1;
+//   }
+// }
+
+// var numbersArray = [60, 50, 62, 58, 54, 54];
+// numbersArray.sort(compareNumbers);
+// console.log(numbersArray);
+
+// function compareNumbers(num1, num2) {
+//   if (num2 > num1) {
+//     return 1;
+//   } else if (num1 === num2) {
+//     return 0;
+//   } else {
+//     return -1;
+//   }
+// }
+// -------------------------------------
+
+// var products = [{ name: "Grapefruit", calories: 170, color: "red", sold: 8200 },
+// { name: "Orange", calories: 160, color: "orange", sold: 12101 },
+// { name: "Cola", calories: 210, color: "caramel", sold: 25412 },
+// { name: "Diet Cola", calories: 0, color: "caramel", sold: 43922 },
+// { name: "Lemon", calories: 200, color: "clear", sold: 14983 },
+// { name: "Raspberry", calories: 180, color: "pink", sold: 9427 },
+// { name: "Root Beer", calories: 200, color: "caramel", sold: 9909 },
+// { name: "Water", calories: 0, color: "clear", sold: 62123 }
+// ];
+
+// function compareSold(colaA, colaB) {
+//   if (colaA.sold > colaB.sold) {
+//     return 1;
+//   } else if (colaA.sold === colaB.sold) {
+//     return 0;
+//   } else {
+//     return -1;
+//   }
+// }
+
+// function printProducts(products) {
+//   for (var i = 0; i < products.length; i++) {
+//     console.log("Name: " + products[i].name + 
+//     ", Calories: " + products[i].calories + 
+//     ", color: "+ products[i].color + 
+//     ", Sold: " + products[i].sold);
+//   }
+// }
+// products.sort(compareSold);
+// printProducts(products);
+
+// function compareName(colaA, colaB) {
+//   if (colaA.name > colaB.name) {
+//     return 1;
+//   } else if (colaA.name === colaB.name) {
+//     return 0;
+//   } else {
+//     return -1;
+//   }
+// }
+
+// products.sort(compareName);
+// console.log("Products sorted by name:");
+// printProducts(products);
+// -----------------------------------------------
+
+// administer(patient, function(dosage) { if (dosage > 0) {inject(dosage);}}, time);
+
+
+
+// function makeCounter() {
+//   var count = 0;
+
+//   function counter() {
+//     count = count + 1;
+//     return count;
+//   }
+//   return counter;
+// }
+// var doCount = makeCounter();
+// console.log(doCount());
+// console.log(doCount());
+// console.log(doCount());
+// console.log(doCount());
+// console.log(doCount());
+// ------------------------------------------------
+
+// function Dog(name, breed, weight) {
+//   this.name = name;
+//   this.breed = breed;
+//   this.weight = weight;
+//   this.bark = function() {
+//     if (this.weight > 25) {
+//       alert(this.name + " says Woof!");
+//     } else {
+//       alert(this.name + " says Yip!");
+//     }
+//   };
+// }
+
+// var fido = new Dog("Fido", "Mixed", 38);
+// var fluffy = new Dog("Fluffy", "poodle", 30);
+// var spot = new Dog("Spot", "Chihuahua", 10);
+// var dogs = [fido, fluffy, spot];
+
+
+// for (var i = 0; i < dogs.length; i++) {
+//   dogs[i].bark()
+// }
+
+// for (var i = 0; i < dogs.length; i++) {
+//   var size = "small";
+//   if (dogs[i].weight > 10) {
+//     size = "large";
+//   }
+//   console.log("Dog: " + dogs[i].name + " is a " + size + " " + dogs[i].breed);
+// }
+
+// ---------------------------------------
+
+function Coffee(roast, ounces) {
+  this.roast = roast;
+  this.ounces = ounces;
+  this.getSize = function() {
+    if (this.ounces === 8) {
+      return "small";
+    } else if (this.ounces === 12) {
+      return "medium";
+    } else if (this.ounces === 15) {
+      return "large";
+    }
+  };
+  this.toString = function() {
+    return "You`ve ordered a " + this.getSize() + " " + this.roast + " coffee.";
+  };
 }
 
-const Cat = new Animal
+var houseBlend = new Coffee("house Blend", 12);
+console.log(houseBlend.toString());
 
-console.log(Cat);
+var darkRoast = new Coffee("Dark roast", 15);
+console.log(darkRoast.toString());
