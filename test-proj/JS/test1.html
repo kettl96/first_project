@@ -874,22 +874,23 @@ console.log(likes(['Alex', 'Jacob', 'Mark', 'Max', 'dodik']));
 }
 </script> -->
 
-<script>
+<!-- <script>
   function pigIt(str){
     // let arr = str.split(' ').map(word => word.split(''));
     // let hui = str.split(' ').map(word => word.split(''))
     // .map((arr) => arr.splice(0,1, 'X'))
-console.log(str.split(' ').map(word => word.split('')).map((arr) => arr.splice(1,arr.length).join('')+arr[0]+'ay').join(' '));
+console.log(str.split(' ').map(word => word.split('')).map((arr) => arr.splice(1,arr.length).join('')+arr[0]).map(a => !a.includes('!') && !a.includes('?') ? a+'ay' : a+'').join(' '))
+// .join('')+arr[0]+'ay').join(' '));
 // console.log(arr.map((arr) => arr.splice(0,1, [arr[0]])) );
 // let cut = hui.map(i => i.splice(1,i.length, 'lol'))
 // console.log(hui);
 // console.log(cut);
 return str.split(' ').map(word => word.split('')).map((arr) => arr.splice(1,arr.length).join('')+arr[0]+'ay').join(' ');
 }
-console.log(pigIt('Hello world !'));
+console.log(pigIt('0 Hello is world ?'));
 
 // .map((arr, i) => arr.push(arr.splice(0,1)))
-</script>
+</script> -->
 
 <!-- <script>
   function toWeirdCase(string){
@@ -904,6 +905,62 @@ console.log(pigIt('Hello world !'));
   i.splice(0,1, '5')
   console.log(i);
 </script> -->
+
+<script>
+  const MORSE_TABLE = {
+    '.-':     'a',
+    '-...':   'b',
+    '-.-.':   'c',
+    '-..':    'd',
+    '.':      'e',
+    '..-.':   'f',
+    '--.':    'g',
+    '....':   'h',
+    '..':     'i',
+    '.---':   'j',
+    '-.-':    'k',
+    '.-..':   'l',
+    '--':     'm',
+    '-.':     'n',
+    '---':    'o',
+    '.--.':   'p',
+    '--.-':   'q',
+    '.-.':    'r',
+    '...':    's',
+    '-':      't',
+    '..-':    'u',
+    '...-':   'v',
+    '.--':    'w',
+    '-..-':   'x',
+    '-.--':   'y',
+    '--..':   'z',
+    '.----':  '1',
+    '..---':  '2',
+    '...--':  '3',
+    '....-':  '4',
+    '.....':  '5',
+    '-....':  '6',
+    '--...':  '7',
+    '---..':  '8',
+    '----.':  '9',
+    '-----':  '0',
+};
+
+//  function decode(expr) {
+// return expr.split('   ').map(a => a.split(' ').map(b => MORSE_TABLE[b]).join('')).join(' ');
+// }
+
+function decode(expr) {
+    let arr = expr.match(/.{10}/g);
+    console.log(expr.match(/.{10}/g));
+    let morse = arr.map((item) => item.replace(/0{2,}/, '').replace(/10/g, '.').replace(/11/g, '-').replace(/\*/g, ' '));
+    return (morse.map((item) => (item == 0) ? ' ' : MORSE_TABLE[item])).join('');
+}
+console.log(decode('00101010100000000010001011101000101110100000111111**********00001011110000111111000010111000101110100000111010'));
+</script>
+
+
+
 
 </body>
 
