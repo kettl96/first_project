@@ -906,7 +906,7 @@ console.log(pigIt('0 Hello is world ?'));
   console.log(i);
 </script> -->
 
-<script>
+<!-- <script>
   const MORSE_TABLE = {
     '.-':     'a',
     '-...':   'b',
@@ -952,13 +952,56 @@ console.log(pigIt('0 Hello is world ?'));
 
 function decode(expr) {
     let arr = expr.match(/.{10}/g);
-    console.log(expr.match(/.{10}/g));
+    console.log(expr.match(/.{10}/g).map(item => item.replace(/0{2,}/, '').replace(/10/g, '.').replace(/11/g, '-').replace(/\*/g, ' ')).map(i => i==0 ? ' ' : MORSE_TABLE[i]).join(''));
     let morse = arr.map((item) => item.replace(/0{2,}/, '').replace(/10/g, '.').replace(/11/g, '-').replace(/\*/g, ' '));
     return (morse.map((item) => (item == 0) ? ' ' : MORSE_TABLE[item])).join('');
 }
 console.log(decode('00101010100000000010001011101000101110100000111111**********00001011110000111111000010111000101110100000111010'));
-</script>
+</script> -->
 
+<!-- <script>
+function towelSort(matrix) {
+    let newArr = [];
+    for (let key in matrix) {
+        if (key % 2 !== 0) {
+            newArr.push(...matrix[key].reverse());
+        }
+        else {
+            newArr.push(...matrix[key])
+        }
+    }
+    return newArr;
+}
+function towelSort(matrix) {
+    let newArr = [];
+    for (let key in matrix) {
+       key % 2 !== 0 ? newArr.push(...matrix[key].reverse()) : newArr.push(...matrix[key])
+    }
+    return newArr;
+}
+console.log(towelSort([
+[1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+        [13, 14, 15, 16],
+    ]));
+</script> -->
+
+<!-- <script>
+  function towelSort (matrix = []) {
+  let resultArr = [];
+  matrix.forEach((element, index) => {
+    index % 2 ? resultArr.push(...element.reverse()) : resultArr.push(...element)
+  });
+  return resultArr;
+}
+console.log(towelSort([
+[1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+        [13, 14, 15, 16],
+    ]));
+</script> -->
 
 
 
