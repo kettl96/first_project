@@ -1003,8 +1003,46 @@ console.log(towelSort([
     ]));
 </script> -->
 
+<!-- <script>
+  const config1 = [['(', ')']];
+const config2 = [['(', ')'], ['[', ']']];
 
+  function check(str, bracketsConfig) {
+  const brackets = bracketsConfig.map(pair => pair.join(''))
+  for (let i = 0; i < brackets.length;) {
+    if (str.includes(brackets[i])) {
+      str = str.replace(brackets[i], '')
+      i = 0
+    }
+    else i++
+  }
+  return str === ''
+  }
 
+  assert.equal(check('()', config1), true);
+  assert.equal(check('[(])', config2), false);
+
+</script> -->
+
+<script>
+  // function lol() {
+  //   console.log('kek');
+  //   localStorage.setItem('win', i)
+  //   console.log(lol);
+  //   console.log(y);
+  // }
+  // lol()
+  let arr = []
+  arr.push({x: 'hui'})
+  let a1 = JSON.stringify(arr)
+  console.log('a1', a1, typeof a1);
+  let a2 = JSON.parse(a1)
+  console.log('a2', a2, typeof a2);
+  a2.push({x: 'NE HUI'})
+  console.log(a2);
+  
+
+</script>
 </body>
 
 </html>
