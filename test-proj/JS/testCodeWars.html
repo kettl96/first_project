@@ -761,7 +761,7 @@ console.log(rgb(300,255,255));
     }
     console.log(getCard());
   </script> -->
-  
+
   <!-- <script>
     function getCard() {
       function getRandomArbitrary(min, max) {
@@ -803,7 +803,7 @@ return counter;
     console.log(countBites(51));
   </script> -->
 
-<!-- <script>
+  <!-- <script>
   function whatTimeIsIt(a) { 
     let time = a*2;
     let m = Math.floor(time % 60);
@@ -814,7 +814,7 @@ return  `${h.toString().split('').length == 2 ? h : `0${h}`}:${m.toString().spli
 console.log(whatTimeIsIt(1));
 </script> -->
 
-<!-- <script>
+  <!-- <script>
   
 function isPrime(num) {
   let s = Math.sqrt(num)
@@ -829,7 +829,7 @@ console.log(isPrime(9));
 
 </script> -->
 
-<!-- <script>
+  <!-- <script>
   function toWeirdCase(str){
     let arr = str.split(' ');
     console.log(arr);
@@ -842,7 +842,7 @@ console.log(6%2);
 return string.split(' ').map(word => word.split('')).map((a, b) => b%2 ? a.toLowerCase() : a.toUpperCase().join('')).join(' ')
 </script> -->
 
-<!-- <script>
+  <!-- <script>
   function likes(names) {
     if (names.length < 1) {
       return 'no one likes this';
@@ -865,7 +865,7 @@ return string.split(' ').map(word => word.split('')).map((a, b) => b%2 ? a.toLow
 console.log(likes(['Alex', 'Jacob', 'Mark', 'Max', 'dodik']));
 </script> -->
 
-<!-- <script>
+  <!-- <script>
   function bingo(ticket, win){
   if(ticket.filter(a => a[0].split('').some(b => b.charCodeAt(0) == a[1])).length >= win) {
     return "Winner!";
@@ -874,7 +874,7 @@ console.log(likes(['Alex', 'Jacob', 'Mark', 'Max', 'dodik']));
 }
 </script> -->
 
-<!-- <script>
+  <!-- <script>
   function pigIt(str){
     // let arr = str.split(' ').map(word => word.split(''));
     // let hui = str.split(' ').map(word => word.split(''))
@@ -892,7 +892,7 @@ console.log(pigIt('0 Hello is world ?'));
 // .map((arr, i) => arr.push(arr.splice(0,1)))
 </script> -->
 
-<!-- <script>
+  <!-- <script>
   function toWeirdCase(string){
   return string.split(' ')
   .map(word => word.split('')
@@ -900,13 +900,13 @@ console.log(pigIt('0 Hello is world ?'));
 }
 </script> -->
 
-<!-- <script>
+  <!-- <script>
   let i = ['1', '2', '3']
   i.splice(0,1, '5')
   console.log(i);
 </script> -->
 
-<!-- <script>
+  <!-- <script>
   const MORSE_TABLE = {
     '.-':     'a',
     '-...':   'b',
@@ -959,7 +959,7 @@ function decode(expr) {
 console.log(decode('00101010100000000010001011101000101110100000111111**********00001011110000111111000010111000101110100000111010'));
 </script> -->
 
-<!-- <script>
+  <!-- <script>
 function towelSort(matrix) {
     let newArr = [];
     for (let key in matrix) {
@@ -987,7 +987,7 @@ console.log(towelSort([
     ]));
 </script> -->
 
-<!-- <script>
+  <!-- <script>
   function towelSort (matrix = []) {
   let resultArr = [];
   matrix.forEach((element, index) => {
@@ -1003,7 +1003,7 @@ console.log(towelSort([
     ]));
 </script> -->
 
-<!-- <script>
+  <!-- <script>
   const config1 = [['(', ')']];
 const config2 = [['(', ')'], ['[', ']']];
 
@@ -1024,7 +1024,7 @@ const config2 = [['(', ')'], ['[', ']']];
 
 </script> -->
 
-<script>
+  <!-- <script>
   // function lol() {
   //   console.log('kek');
   //   localStorage.setItem('win', i)
@@ -1042,7 +1042,26 @@ const config2 = [['(', ')'], ['[', ']']];
   console.log(a2);
   
 
-</script>
+</script> -->
+
+  <script>
+    function absentVowel(x) {
+      let data = {
+        a: 0,
+        e: 1,
+        i: 2,
+        o: 3,
+        u: 4
+      }
+      for (let key in data) {
+        if (!x.includes(key)) {
+          return data[key]
+        }
+      }
+    }
+    console.log(absentVowel("John Doe hs seven red pples under his bsket")); 
+  </script>
+
 </body>
 
 </html>
