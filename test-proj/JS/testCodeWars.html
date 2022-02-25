@@ -1044,7 +1044,7 @@ const config2 = [['(', ')'], ['[', ']']];
 
 </script> -->
 
-  <script>
+  <!-- <script>
     function absentVowel(x) {
       let data = {
         a: 0,
@@ -1060,7 +1060,70 @@ const config2 = [['(', ')'], ['[', ']']];
       }
     }
     console.log(absentVowel("John Doe hs seven red pples under his bsket")); 
-  </script>
+  </script> -->
+
+  <!-- <script>
+    function getMiddle(s) {
+      let arr = s.split('')
+      console.log(arr);
+      for (let i = 0; i < s.length; i++) {
+        if (s.length % 2 == 0) {
+          let num = s.length / 2
+          return arr[num - 1] + arr[num]
+        }
+        if (s.length % 2 !== 0) {
+          let num = Math.floor(s.length/2)
+          console.log(num);
+          return arr[num]
+        }
+      }
+    }
+    console.log(getMiddle("tests"));
+  </script> -->
+
+  <!-- <script>
+    function getMiddle(s) {
+      let sp = s.split('');
+      let l = s.length;
+      return l % 2 == 0 ? sp[l / 2 - 1] + sp[l / 2] : sp[Math.floor(l / 2)]
+
+
+      // let arr = s.split('')
+      // console.log(arr);
+      // for (let i = 0; i < s.length; i++) {
+      //   if (s.length % 2 == 0) {
+      //     let num = s.length / 2
+      //     return arr[num - 1] + arr[num]
+      //   }
+      //   if (s.length % 2 !== 0) {
+      //     let num = Math.floor(s.length/2)
+      //     console.log(num);
+      //     return arr[num]
+      //   }
+      // }
+    }
+    console.log(getMiddle("test"));
+  </script> -->
+
+<!-- <script>
+function highAndLow(n){
+let result = n.split(' ').map(e=>e*1).sort((a,b)=>{return a-b})
+console.log(result);
+let a = result.splice(1,  - 2)
+console.log(a);
+return result[result.length - 1] + ' ' + result[0]
+}
+
+  console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
+</script> -->
+
+<!-- <script>
+  function toJadenCase (text) {
+    return text.split(' ').map(e => e[0].toUpperCase()+e.slice(1)).join(' ')   
+};
+// {e.split(''); return e[0].toUpperCase()+e.splice(1,1)}
+  console.log(toJadenCase("How can mirrors be real if our eyes aren't real"));
+</script> -->
 
 </body>
 
