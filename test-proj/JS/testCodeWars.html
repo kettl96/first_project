@@ -1105,7 +1105,7 @@ const config2 = [['(', ')'], ['[', ']']];
     console.log(getMiddle("test"));
   </script> -->
 
-<!-- <script>
+  <!-- <script>
 function highAndLow(n){
 let result = n.split(' ').map(e=>e*1).sort((a,b)=>{return a-b})
 console.log(result);
@@ -1117,13 +1117,184 @@ return result[result.length - 1] + ' ' + result[0]
   console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"));
 </script> -->
 
-<!-- <script>
+  <!-- <script>
   function toJadenCase (text) {
     return text.split(' ').map(e => e[0].toUpperCase()+e.slice(1)).join(' ')   
 };
 // {e.split(''); return e[0].toUpperCase()+e.splice(1,1)}
   console.log(toJadenCase("How can mirrors be real if our eyes aren't real"));
 </script> -->
+
+  <!-- <script>
+    function disemvowel(str) {
+      let vowels = ['i', 'e', 'o', 'a', 'u', 'I', 'E', 'O', 'A', 'U']
+      return str.split('').map(el => {
+        if (!vowels.includes(el)) {
+          return el
+        }
+      }).join('');
+    }
+
+    console.log(disemvowel("This website is for losers LOL!"));
+  </script> -->
+
+  <!-- <script>
+    function isIsogram(str) {
+      let arr = str.toLowerCase().split('');
+      console.log(arr);
+      let cache;
+      for (let i = 0; i < str.length; i++) {
+        cache = str[i];
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (cache == arr[i]) {
+            count++
+          }
+          if (count == 2) {
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+    console.log(isIsogram("isogramM"));
+  </script> -->
+
+
+  <!-- <script>
+    function explode(s) {
+      let arr = s.split('');
+      let resultArray = [];
+      let counter = 0;
+      
+      let count = (i) => {
+        if (counter < i) {
+          resultArray.push(i) * i
+          counter++
+        } else {
+          return counter = 0;
+        }
+        count(i);
+      }
+      for (let i = 0; i < arr.length; i++) {
+        count(arr[i])
+      }      
+      return resultArray.join('');
+    }
+    console.log(explode('312'));
+  </script> -->
+
+  <!-- <script>
+  function getParticipants(handshakes){
+  if(!handshakes) return 1;
+
+  let answer = 0;
+  let sum = 0
+
+  while(handshakes > sum) {
+    sum = answer * (answer + 1) / 2;
+    answer++;
+  }
+  return answer;
+}
+console.log(getParticipants(7));
+</script> -->
+
+  <!-- <script>
+let s = '73304'
+let r = s.split('').map(e => e**3).reduce((sum,el)=> sum+el,0)
+console.log(r);
+
+
+    function revrot(str, sz) {
+      if(sz < 1 || !str || sz > str.length) return "";
+      let array = str.split('')
+      let slicedArr = [];
+      for (let i = 0; i < array.length; i += sz) {
+        slicedArr.push(array.slice(i, i + sz))
+      }
+     
+      let result = [];
+      for (let i = 0; i < Math.floor(str.length / sz); i++) {
+        let a = slicedArr[i].map(e => e**3).reduce((sum,el)=> sum+el,0)
+        a % 2 == 0
+          ? result.push(slicedArr[i].reverse().join(','))
+          : result.push(slicedArr[i].slice(1) + ','+ slicedArr[i][0])
+      }
+      return result.join(',').split(',').join('')
+    }
+    console.log(revrot("733049910872815764", 5));
+
+
+    // function revrot(str, sz) {
+    //   ln = str.length;
+    //   if (sz < 1 || !str || sz > ln) return "";
+
+    //   const test = s => Array.prototype.reduce.call(s, (acc, val) => acc + Number(val) ** 3, 0) % 2 === 0;
+    //   const reverse = s => s.split("").reverse().join("");
+    //   const rotate = s => s.slice(1) + s.slice(0, 1);
+
+    //   let arr = [];
+    //   for (let i = 0; i < ln; i += sz) arr.push(i + sz <= ln ? str.slice(i, i + sz) : "")
+    //   return arr.map(x => test(x) ? reverse(x) : rotate(x)).join("");
+    // }
+
+  </script> -->
+
+  <!-- <script>
+    function solution(number) {
+      if (number <= 0) return 0;
+      let arr = []
+      for (let i = 0; i < number; i++) {
+        if (i % 3 == 0 || i % 5 == 0) arr.push(i)
+      }
+      return arr.reduce((sum, el) => sum + el)
+    }
+    console.log(solution(16));
+  </script> -->
+
+  <!-- <script>
+    function deepCount(a) {
+      return a.reduce((s, e) => s + (Array.isArray(e) ? deepCount(e) : 0), a.length);
+    }
+    // console.log(deepCount([1, 2, [3, 4, [5]]]));
+    console.log(deepCount([[[[[[[[[]]]]]]]]]));
+  </script> -->
+
+  <!-- <script>
+    // var validWord = function (dictionary, word) {
+    //   // console.log(word.includes(dictionary[0]));
+    //   if (dictionary.length === 0) return false;
+    //   if (dictionary.join('')==word) return true;
+    //   if (dictionary.reverse().join('')==word) return true;
+
+    //   for(let i = 0;i<dictionary.length;i++) {
+    //     if(dictionary[i].includes(word)) return true;
+    //   }
+    //   let arr = word.split()
+    //   console.log(arr.includes(dictionary[0]));
+    //   if(arr.some((el, i, dictionary)=> {})) return 1
+    //   return false;
+    // };
+
+    // var validWord = function (dictionary, word) {
+    //   console.log(1
+    //   );
+    //   dictionary = dictionary.sort((a, b) => a.length - b.length)
+    //   console.log(dictionary);
+    //   for (let i = 0; i < dictionary.length; i++) {
+    //     word = word.replace(new RegExp(dictionary[i], 'g'), '')
+    //   }
+    //   return !word.length
+    // };
+
+    var validWord =  function(dictionary, word) {
+      console.log(new RegExp(`^(?:${dictionary.join('|')})+$`));
+  return new RegExp(`^(?:${dictionary.join('|')})+$`).test(word);
+};
+
+    console.log(validWord(['fgmz','fg','g','nib','giq','gqph','i'], 'fgmzfg'));
+  </script> -->
 
 </body>
 
