@@ -1296,6 +1296,50 @@ console.log(r);
     console.log(validWord(['fgmz','fg','g','nib','giq','gqph','i'], 'fgmzfg'));
   </script> -->
 
+  <script>
+    function sortByBit(arr) {
+      const countBit = (bit) => bit.toString(2).replace(/[0]/g, '').length
+      return arr.sort((a, b) => countBit(a) === countBit(b) ? a - b : countBit(a) - countBit(b))
+    }
+    console.log(sortByBit([3, 8, 3, 6, 5, 7, 9, 1]));
+
+    // function sortByBit(arr) {
+    //   let a = arr.sort()
+    //   let b = a.map(e => e.toString(2).split(''))
+    //   console.log(a);
+    //   console.log(b);
+    //   // .map(e=> {
+    //   //   if(e==1) return 1
+    //   // })
+    //   let array =[]
+    //   for (let i = 0; i < b.length; i++) {
+    //     let step = b[i].map(e=>{if(e==1)return e}).join('')
+    //     array.push(step)
+    //     // console.log(array);
+    //     // for (let i = 0; i < b.length; i++) {
+    //     //   if(step[i]==1) {
+    //     //     array.push(step[i])
+    //     //   }
+    //     // }
+    //   }
+    //   console.log(array);
+    //   let obj = {}
+    //   for (let i = 0; i < a.length; i++) {
+    //     obj[a[i]] = array[i]
+    //   }
+    //   let ob = Object.entries(obj)
+    //   console.log(ob);
+    //   console.log(obj.map(e=> e.sort((a,b)=> {a-b})));
+
+    //   // let bitsArray = arr.sort().forEach(e => Number(e.toString(2).split('').sort().join('')))
+    //   // // let res = bitsArray.map(e => parseInt(e, 2))
+    //   // console.log(bitsArray);
+    //   // console.log(res);
+    //   // console.log(bitsArray.sort());
+    // }
+    // [1, 8, 3, 3, 5, 6, 9, 7]
+  </script>
+
 </body>
 
 </html>
