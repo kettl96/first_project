@@ -1296,7 +1296,7 @@ console.log(r);
     console.log(validWord(['fgmz','fg','g','nib','giq','gqph','i'], 'fgmzfg'));
   </script> -->
 
-  <script>
+  <!-- <script>
     function sortByBit(arr) {
       const countBit = (bit) => bit.toString(2).replace(/[0]/g, '').length
       return arr.sort((a, b) => countBit(a) === countBit(b) ? a - b : countBit(a) - countBit(b))
@@ -1338,8 +1338,79 @@ console.log(r);
     //   // console.log(bitsArray.sort());
     // }
     // [1, 8, 3, 3, 5, 6, 9, 7]
-  </script>
+  </script> -->
 
+  <!-- <script>
+    function formatDuration(s) {
+      if (s == 0) return 'now';
+      let Obj = {}
+      Obj.second = Math.round(s % 60)
+      Obj.minute = Math.floor(s / 60) >= 60 ? Math.floor(s / 60) % 60 : Math.floor(s / 60)
+      Obj.hour = Math.floor(s / 60 / 60) > 24 ? Math.floor(s / 60 / 60) % 24 : Math.floor(s / 60 / 60)
+      Obj.day = Math.floor(s / 60 / 60 / 24) > 365 ? Math.floor(s / 60 / 60 / 24) % 365 : Math.floor(s / 60 / 60 / 24)
+      Obj.year = Math.floor(s / 60 / 60 / 24 / 365)
+      let resultArr = [];
+      let resolver = (value, base, resultArr) => {
+        if (!value) return
+        if (value === 1) {
+          resultArr.push(`${value} ${base}`)
+        } else {
+          resultArr.push(`${value} ${base}s`)
+        }
+      }
+      for (let key in Obj) {
+        resolver(Obj[key], key, resultArr)
+      }
+      resultArr.reverse()
+      let result = ""
+      let lastValue
+      if (resultArr.length > 1) {
+        lastValue = resultArr.splice(resultArr.length - 1, 1)
+      }
+      result = resultArr.join(', ')
+      if (lastValue) {
+        result += ' and ' + lastValue
+      }
+      return result
+    }
+
+    console.log(formatDuration(98999961));
+
+  </script> -->
+
+  <!-- <script>
+    function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+  
+}
+console.log(checkCoupon('123a','123','September 5, 2014','October 1, 2014'));
+  </script> -->
+
+  <!-- <script>
+    function checkCoupon(enteredCode, correctCode, currentDate, expirationDate) {
+      let d = new Date(currentDate)
+      console.log(d);
+      return enteredCode===correctCode && Date.parse(currentDate) <= Date.parse(expirationDate)  
+      // let arr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+      // let cur = currentDate.split(' ')
+      // let exp = expirationDate.split(' ')
+      // // let month = arr.indexOf(cur[0])+1
+      // let curDay = cur[1].split('')
+      // let expDay = exp[1].split('')
+      // // console.log(month);
+      // // console.log(cur[1].split(''));
+      // currentDate = new Date()
+      // let curDate = new Date(cur[2], arr.indexOf(cur[0]) + 1, curDay[0])
+      // let newDate = new Date(exp[2], arr.indexOf(exp[0]) + 1, expDay[0])
+      // // console.log(curDate>newDate);
+      // return enteredCode==correctCode && curDate<=newDate
+    }
+    console.log(Date.parse('October 1, 2014'));
+    console.log(checkCoupon('123', '123', 'October 1, 2014', 'October 1, 2014'));
+  </script> -->
+
+
+  
 </body>
+
 
 </html>
