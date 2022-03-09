@@ -1408,7 +1408,7 @@ console.log(checkCoupon('123a','123','September 5, 2014','October 1, 2014'));
     console.log(checkCoupon('123', '123', 'October 1, 2014', 'October 1, 2014'));
   </script> -->
 
-  <script>
+  <!-- <script>
     function unluckyDays(year) {
       const unluckyDays = year => {
         const names = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
@@ -1426,7 +1426,24 @@ console.log(checkCoupon('123a','123','September 5, 2014','October 1, 2014'));
         return fridays13.reduce((total, friday) => total + friday, 0)
       }
     }
-  </script>
+  </script> -->
+
+  <!-- <script>
+    var runLengthEncoding = function (str) {
+      const arr = [];
+      let count = 1;
+      for (let i = 0; i < str.length; i++) {
+        if (str[i] !== str[i + 1]) {
+          arr.push([count, str[i]]);
+          count = 1;
+        } else {
+          count++;
+        }
+      }
+      return arr;
+    }
+  </script> -->
+
 
 </body>
 
